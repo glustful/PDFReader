@@ -5,6 +5,39 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Reader Slide Controller-->
+        <scene sceneID="2Kn-CJ-Osz">
+            <objects>
+                <viewController id="m8B-Sv-d1q" customClass="PDFReaderSlideController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQK-FM-W90"/>
+                        <viewControllerLayoutGuide type="bottom" id="cgG-ln-gJy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Xz-36-gBv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUT-Fp-AFD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qUT-Fp-AFD" firstAttribute="leading" secondItem="9Xz-36-gBv" secondAttribute="leading" id="AyD-xL-D8D"/>
+                            <constraint firstItem="cgG-ln-gJy" firstAttribute="top" secondItem="qUT-Fp-AFD" secondAttribute="bottom" id="Vic-YH-Dvz"/>
+                            <constraint firstItem="qUT-Fp-AFD" firstAttribute="top" secondItem="nQK-FM-W90" secondAttribute="bottom" id="bh9-oV-abK"/>
+                            <constraint firstAttribute="trailing" secondItem="qUT-Fp-AFD" secondAttribute="trailing" id="uF5-3o-WRd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pdfView" destination="qUT-Fp-AFD" id="fEz-Al-KaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xQ-Tf-Nx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="1280"/>
+        </scene>
         <!--Reader Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -22,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="1013"/>
+            <point key="canvasLocation" x="1086" y="579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9cU-QP-zPn">
@@ -35,12 +68,61 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iEs-7n-rr0"/>
+                        <segue destination="cgd-Ub-fau" kind="relationship" relationship="rootViewController" id="Lyz-Zh-ME0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWd-Ix-igk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="1013"/>
+            <point key="canvasLocation" x="-428" y="1018"/>
+        </scene>
+        <!--PDF阅读器-->
+        <scene sceneID="AFJ-yu-WUk">
+            <objects>
+                <viewController id="cgd-Ub-fau" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZU-Nr-pcJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="E5g-RH-zdn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BXv-6P-yMV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-tb-Krx">
+                                <rect key="frame" x="20" y="205" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IId-UO-dus"/>
+                                </constraints>
+                                <state key="normal" title="无缩放使用UIPageViewController实现的卷动翻页"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="JdR-3N-fpS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxU-zD-ieS">
+                                <rect key="frame" x="20" y="275" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oid-1Z-8zc"/>
+                                </constraints>
+                                <state key="normal" title="带缩放左右滑动翻页阅读模式"/>
+                                <connections>
+                                    <segue destination="m8B-Sv-d1q" kind="show" id="9Ba-9k-3EB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qxU-zD-ieS" firstAttribute="leading" secondItem="BXv-6P-yMV" secondAttribute="leading" constant="20" id="Jqa-1c-WtX"/>
+                            <constraint firstAttribute="trailing" secondItem="qxU-zD-ieS" secondAttribute="trailing" constant="20" id="Nha-Sk-zTF"/>
+                            <constraint firstAttribute="trailing" secondItem="a1v-tb-Krx" secondAttribute="trailing" constant="20" id="a0q-aO-zEj"/>
+                            <constraint firstItem="a1v-tb-Krx" firstAttribute="leading" secondItem="BXv-6P-yMV" secondAttribute="leading" constant="20" id="aGp-D8-DxT"/>
+                            <constraint firstItem="qxU-zD-ieS" firstAttribute="centerY" secondItem="BXv-6P-yMV" secondAttribute="centerY" id="dtu-wa-ZYS"/>
+                            <constraint firstItem="qxU-zD-ieS" firstAttribute="top" secondItem="a1v-tb-Krx" secondAttribute="bottom" constant="20" id="yl1-3Z-2fc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PDF阅读器" id="Rm3-Fs-kIY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUh-Mq-1eQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="1013"/>
         </scene>
         <!--Contents View Controller-->
         <scene sceneID="o1b-Od-oh7">
@@ -84,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kp3-gV-mRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743" y="1013"/>
+            <point key="canvasLocation" x="1870" y="943"/>
         </scene>
     </scenes>
 </document>

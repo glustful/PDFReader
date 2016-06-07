@@ -76,8 +76,10 @@
         [self.navigationController pushViewController:viewController animated:YES];
     }else{
         NSNumber * num = dict[@"Index"];
-        [((PDFReaderMainViewController *)[[self navigationController].viewControllers objectAtIndex:0]) skip:[num integerValue]];
-        [[self navigationController] popToRootViewControllerAnimated:YES];
+        
+        PDFReaderMainViewController *controller = (PDFReaderMainViewController *)[[self navigationController].viewControllers objectAtIndex:1] ;
+        [controller skip:[num integerValue]];
+        [[self navigationController] popToViewController:controller animated:YES];
     }
 }
 

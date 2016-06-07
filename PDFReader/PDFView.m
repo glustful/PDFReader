@@ -7,8 +7,6 @@
 //
 
 #import "PDFView.h"
-#define ScreenWidth [UIScreen mainScreen].bounds.size.width;
-#define ScreenHeight [UIScreen mainScreen].bounds.size.height-60;
 @implementation PDFView
 
 -(id)initWithFrame:(CGRect)frame atPage:(int)index withPDFDoc:(CGPDFDocumentRef) pdfDoc{
@@ -23,9 +21,9 @@
     // PDF page drawing expects a Lower-Left coordinate system, so we flip the coordinate system
     // before we start drawing.
     
-    CGContextTranslateCTM(context, 0.0, [UIScreen mainScreen].bounds.size.height-70);
+    CGContextTranslateCTM(context, 0.0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
-    CGRect drawBounds = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-70);
+    CGRect drawBounds = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     int pageSum = CGPDFDocumentGetNumberOfPages(pdfDocument);
     NSLog(@"pageSum = %d", pageSum);
     if (pageNO == 0) {
