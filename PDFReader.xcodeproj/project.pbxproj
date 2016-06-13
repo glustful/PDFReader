@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		830854841D0E89D3005905B7 /* 002.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 830854831D0E89D3005905B7 /* 002.pdf */; };
 		83BF6A9E1D06C29200247EE9 /* PDFReaderSlideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BF6A9D1D06C29200247EE9 /* PDFReaderSlideController.m */; };
 		83DE67D61D01315600BA4B10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE67D51D01315600BA4B10 /* main.m */; };
 		83DE67D91D01315600BA4B10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE67D81D01315600BA4B10 /* AppDelegate.m */; };
@@ -22,7 +21,7 @@
 		83DE68171D0131B700BA4B10 /* PDFPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE680E1D0131B700BA4B10 /* PDFPageModel.m */; };
 		83DE68181D0131B700BA4B10 /* PDFReaderMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE68111D0131B700BA4B10 /* PDFReaderMainViewController.m */; };
 		83DE68191D0131B700BA4B10 /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE68131D0131B700BA4B10 /* PDFView.m */; };
-		83DE681D1D01350800BA4B10 /* 001.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 83DE681C1D01350800BA4B10 /* 001.pdf */; };
+		83DE681D1D01350800BA4B10 /* 002.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 83DE681C1D01350800BA4B10 /* 002.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		830854831D0E89D3005905B7 /* 002.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 002.pdf; sourceTree = "<group>"; };
 		83BF6A9C1D06C29200247EE9 /* PDFReaderSlideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFReaderSlideController.h; sourceTree = "<group>"; };
 		83BF6A9D1D06C29200247EE9 /* PDFReaderSlideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFReaderSlideController.m; sourceTree = "<group>"; };
 		83DE67D11D01315600BA4B10 /* PDFReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +71,7 @@
 		83DE68111D0131B700BA4B10 /* PDFReaderMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFReaderMainViewController.m; sourceTree = "<group>"; };
 		83DE68121D0131B700BA4B10 /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
 		83DE68131D0131B700BA4B10 /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
-		83DE681C1D01350800BA4B10 /* 001.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 001.pdf; sourceTree = "<group>"; };
+		83DE681C1D01350800BA4B10 /* 002.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 002.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +122,7 @@
 		83DE67D31D01315600BA4B10 /* PDFReader */ = {
 			isa = PBXGroup;
 			children = (
-				830854831D0E89D3005905B7 /* 002.pdf */,
-				83DE681C1D01350800BA4B10 /* 001.pdf */,
+				83DE681C1D01350800BA4B10 /* 002.pdf */,
 				83DE68071D0131B700BA4B10 /* CommentNode.h */,
 				83DE68081D0131B700BA4B10 /* CommentNode.m */,
 				83DE68091D0131B700BA4B10 /* ContentsViewController.h */,
@@ -281,10 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				830854841D0E89D3005905B7 /* 002.pdf in Resources */,
 				83DE67E41D01315600BA4B10 /* LaunchScreen.storyboard in Resources */,
 				83DE67E11D01315600BA4B10 /* Assets.xcassets in Resources */,
-				83DE681D1D01350800BA4B10 /* 001.pdf in Resources */,
+				83DE681D1D01350800BA4B10 /* 002.pdf in Resources */,
 				83DE67DF1D01315600BA4B10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
