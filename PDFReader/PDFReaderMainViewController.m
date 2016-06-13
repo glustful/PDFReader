@@ -130,7 +130,7 @@
         NSMutableDictionary *outline = [NSMutableDictionary dictionaryWithDictionary:@{@"Title": title}];
         int index = 0;
         if (destNode) {
-            if ([[destNode typeAsString] isEqualToString:@"Dictionary"]) {
+            if ([[destNode typeAsString] isEqualToString:@"Array"]) {
                 CGPDFObjectRef dest = (__bridge CGPDFObjectRef)[[[destNode children] objectAtIndex:0] object];
                 index = [self getIndexInPages:pagesArray forPage:dest];
             } else if ([[destNode typeAsString] isEqualToString:@"Name"]) {
